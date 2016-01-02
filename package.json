@@ -1,0 +1,16 @@
+{
+  "name": "customer_api",
+  "version": "1.0.0",
+  "description": "An API for license bureau to manage their customers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Raihan Muhaimin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.4"
+  }
+}
