@@ -22,7 +22,7 @@ var connection = mongoose.connect('mongodb://nodeapp:password@ds037195.mongolab.
 autoIncrement.initialize(connection);
 
 var Customer = require('./app/models/customer')(autoIncrement);
-
+var EmailService = require('./app/services/email')
 
 //==== Router ====//
 var router = express.Router();
@@ -112,28 +112,8 @@ router.route('/customers/:customer_ticket')
         }
         res.json({ message: 'Customer updated!' });
       });
-      console.log(customer);
-      //if(customer.isReady){
-      //  return res.json({ status: "READY" });
-      //}
-      //return res.json({ status: "NOT READY" });
+      EmailService.sendReadyStatusMail(customer.email, customer.ticketNum );
     });
-    //Customer.find({ticketNum: req.params.customer_ticket}, function(err, customer) {
-    //  if (err)
-    //    return res.send(err);
-    //  if( customer.length === 0 ){
-    //    res.status(404);
-    //    return res.send({ error: "Ticket not found" });
-    //  }
-    //  console.log(customer.isReady);
-    //  if( (req.body.status).toUpperCase() === "READY"){
-    //    customer.isReady = true;
-    //  }
-    //  customer.save(function(err) {
-    //    if (err)
-    //      res.send(err);
-    //    res.json({ message: 'Bear updated!' });
-    //  });
   });
 
 //Prefix our routes with api and then version

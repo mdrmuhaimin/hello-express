@@ -11,7 +11,6 @@ var CustomerSchema   = new Schema({
 });
 
 
-//module.exports = mongoose.model('Customer', CustomerSchema);
 module.exports = function( autoIncrement ){
   CustomerSchema.plugin(autoIncrement.plugin, { model: 'Customer', field: 'ticketNum' });
   return mongoose.model('Customer', CustomerSchema);
