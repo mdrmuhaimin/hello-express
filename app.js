@@ -48,7 +48,6 @@ router.route('/customers')
   .post(function(req, res) {
     var customer = new Customer();
     customer.email = req.body.email;
-    console.log(customer);
     customer.save(function(err, customer) {
       if (err){
         console.log(err);
@@ -74,14 +73,13 @@ router.route('/customers/:customer_ticket')
       res.status(400);
       return res.send({ message: "Ticket should be an integer." });
     }
-    Customer.find({ticketNum: req.params.customer_ticket}, function(err, customer) {
+    Customer.findOne({ticketNum: req.params.customer_ticket}, function(err, customer) {
       if (err)
         return res.send(err);
-      if( customer.length === 0 ){
+      if( customer === null ){
         res.status(404);
         return res.send({ message: "Ticket not found" });
       }
-      customer = customer[0];
       if(customer.isReady){
         return res.json({ status: "READY" });
       }
@@ -93,26 +91,31 @@ router.route('/customers/:customer_ticket')
     req.params.customer_ticket = parseInt(req.params.customer_ticket, 10);
     if(!Number.isInteger(req.params.customer_ticket)){
       res.status(400);
-      return res.send({ error: "Ticket should be an integer." });
+      return res.send({ message: "Ticket should be an integer." });
     }
-    Customer.find({ticketNum: req.params.customer_ticket}, function(err, customer) {
+    Customer.findOne({ticketNum: req.params.customer_ticket}, function(err, customer) {
+      console.log(customer);
       if (err)
         return res.send(err);
-      if( customer.length === 0 ){
+      if( customer === null ){
         res.status(404);
-        return res.send({ error: "Ticket not found" });
+        return res.send({ message: "Ticket not found" });
       }
-      customer = customer[0];
       if( (req.body.status).toUpperCase() === "READY"){
         customer.isReady = true;
+        customer.save(function(err) {
+          if (err) {
+            return res.send(err);
+          }
+          res.status(204);
+          res.send();
+        });
+        EmailService.sendReadyStatusMail(customer.email, customer.ticketNum );
       }
-      customer.save(function(err) {
-        if (err) {
-          return res.send(err);
-        }
-        res.json({ message: 'Customer updated!' });
-      });
-      EmailService.sendReadyStatusMail(customer.email, customer.ticketNum );
+      else{
+        res.status(400);
+        res.send({message: "Invalid Customer Status"});
+      }
     });
   });
 
