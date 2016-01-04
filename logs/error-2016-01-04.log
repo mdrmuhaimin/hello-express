@@ -1,0 +1,122 @@
+Mon, 04 Jan 2016 05:00:23 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:00:23 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:00:26 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:00:26 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":68,"email":"email@valid.com","_id":"5689fc690e768b815db5b038","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:00:26 GMT DELETE /api/v1/customers/67 204 -
+Mon, 04 Jan 2016 05:00:26 GMT DELETE /api/v1/customers/67 204 -
+Mon, 04 Jan 2016 05:00:26 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:00:26 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:00:26 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:00:26 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:00:26 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:00:26 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:00:26 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:01:18 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:01:18 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:01:18 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:01:18 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":70,"email":"email@valid.com","_id":"5689fc9e0e768b815db5b03c","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:01:19 GMT DELETE /api/v1/customers/69 204 -
+Mon, 04 Jan 2016 05:01:19 GMT DELETE /api/v1/customers/69 204 -
+Mon, 04 Jan 2016 05:01:19 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:01:19 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:01:19 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:01:19 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:01:19 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:01:19 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:01:19 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:02:23 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:02:23 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:02:23 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:02:23 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":72,"email":"email@valid.com","_id":"5689fcdf0e768b815db5b040","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:02:23 GMT DELETE /api/v1/customers/71 204 -
+Mon, 04 Jan 2016 05:02:23 GMT DELETE /api/v1/customers/3 204 -
+Mon, 04 Jan 2016 05:02:23 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:02:23 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:02:23 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:02:23 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:02:23 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:02:23 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:02:24 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:03:57 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:03:57 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:03:59 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:03:59 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":74,"email":"email@valid.com","_id":"5689fd3f0e768b815db5b044","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:03:59 GMT DELETE /api/v1/customers/73 204 -
+Mon, 04 Jan 2016 05:03:59 GMT DELETE /api/v1/customers/3 204 -
+Mon, 04 Jan 2016 05:03:59 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:03:59 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:03:59 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:03:59 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:03:59 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:03:59 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:03:59 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:06:27 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:06:27 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:06:28 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:06:28 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":76,"email":"email@valid.com","_id":"5689fdd40e768b815db5b048","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:06:28 GMT DELETE /api/v1/customers/75 204 -
+Mon, 04 Jan 2016 05:06:28 GMT DELETE /api/v1/customers/3 204 -
+Mon, 04 Jan 2016 05:06:28 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:06:28 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:06:28 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:06:28 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:06:28 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:06:28 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:06:28 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:06:39 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:06:39 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:06:39 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:06:39 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":78,"email":"email@valid.com","_id":"5689fddfc0d2fb0c5ee8acbe","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:06:39 GMT DELETE /api/v1/customers/77 204 -
+Mon, 04 Jan 2016 05:06:39 GMT DELETE /api/v1/customers/3 204 -
+Mon, 04 Jan 2016 05:06:39 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:06:39 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:06:40 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:06:40 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:06:40 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:06:40 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:06:40 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:08:11 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:08:11 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:08:11 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:08:11 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":80,"email":"email@valid.com","_id":"5689fe3bc0d2fb0c5ee8acc2","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:08:11 GMT DELETE /api/v1/customers/79 204 -
+Mon, 04 Jan 2016 05:08:11 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:08:11 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:08:11 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:08:11 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:08:11 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:08:11 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:08:11 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:08:36 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:08:36 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:08:37 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:08:37 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":82,"email":"email@valid.com","_id":"5689fe55c0d2fb0c5ee8acc6","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:08:38 GMT DELETE /api/v1/customers/81 204 -
+Mon, 04 Jan 2016 05:08:38 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:08:38 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:08:38 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:08:38 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:08:38 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:08:38 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:08:38 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:09:12 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:09:12 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:09:12 GMT POST /api/v1/customers/ 201 -
+Mon, 04 Jan 2016 05:09:12 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":84,"email":"email@valid.com","_id":"5689fe78c0d2fb0c5ee8acca","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:09:12 GMT DELETE /api/v1/customers/83 204 -
+Mon, 04 Jan 2016 05:09:12 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:09:12 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:09:12 GMT GET /api/v1/customers/1 200 -
+Mon, 04 Jan 2016 05:09:12 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:09:12 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:09:12 GMT PUT /api/v1/customers/1 400 -
+Mon, 04 Jan 2016 05:09:12 GMT PUT /api/v1/customers/10 204 -
+Mon, 04 Jan 2016 05:13:03 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value ``
+Mon, 04 Jan 2016 05:13:03 GMT POST /api/v1/customers/ 400 ValidationError: Validator failed for path `email` with value `asj@s.c`
+Mon, 04 Jan 2016 05:13:03 GMT POST /api/v1/customers/ 400 WriteError({"code":11000,"index":0,"errmsg":"E11000 duplicate key error index: heroku_ll6jsgr2.customers.$email_1 dup key: { : \"email@valid.com\" }","op":{"ticketNum":86,"email":"email@valid.com","_id":"5689ff5f088ad4375ef06d35","isReady":false,"__v":0}})
+Mon, 04 Jan 2016 05:13:03 GMT GET /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:13:03 GMT GET /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:13:03 GMT PUT /api/v1/customers/abc 400 -
+Mon, 04 Jan 2016 05:13:03 GMT PUT /api/v1/customers/3 404 -
+Mon, 04 Jan 2016 05:13:03 GMT PUT /api/v1/customers/1 400 -
