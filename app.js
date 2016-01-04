@@ -37,8 +37,8 @@ var accessLogStream = FileStreamRotator.getStream({
   verbose: false,
   date_format: "YYYY-MM-DD"
 });
-// setup the logger
 
+// setup the logger
 morgan.token('err', function(req, res){
   var err = res.err;
   delete res.err;
@@ -59,10 +59,6 @@ router.use(function(req, res, next) {
   //todo: Authenticate the user for using API
   next();
 });
-
-//router.get('/', function(req, res) {
-//  res.json({ message: 'hooray! welcome to our api!' });
-//});
 
 router.route('/customers')
 
