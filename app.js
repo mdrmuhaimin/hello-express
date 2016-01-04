@@ -72,14 +72,14 @@ router.route('/customers/:customer_ticket')
     req.params.customer_ticket = parseInt(req.params.customer_ticket, 10);
     if(!Number.isInteger(req.params.customer_ticket)){
       res.status(400);
-      return res.send({ error: "Ticket should be an integer." });
+      return res.send({ message: "Ticket should be an integer." });
     }
     Customer.find({ticketNum: req.params.customer_ticket}, function(err, customer) {
       if (err)
         return res.send(err);
       if( customer.length === 0 ){
         res.status(404);
-        return res.send({ error: "Ticket not found" });
+        return res.send({ message: "Ticket not found" });
       }
       customer = customer[0];
       if(customer.isReady){
