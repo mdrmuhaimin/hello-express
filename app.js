@@ -3,7 +3,7 @@
  */
 
 // Packages
-var express = require('express');
+var express =  require('express');
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
@@ -59,6 +59,12 @@ router.use(function(req, res, next) {
   //todo: Authenticate the user for using API
   next();
 });
+
+router.route('/tests')
+  .get(function(req, res){
+    res.status(200);
+    return res.send({ status: "Green" });
+  });
 
 router.route('/customers')
 
