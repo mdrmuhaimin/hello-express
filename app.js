@@ -63,7 +63,7 @@ router.use(function(req, res, next) {
 router.route('/tests')
   .get(function(req, res){
     res.status(200);
-    return res.send({ status: "Active" });
+    return res.send({ status: "Green" });
   });
 
 //Prefix our routes with api and then version
