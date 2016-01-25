@@ -69,7 +69,7 @@ router.route('/tests')
   router.route('/hello')
     .get(function(req, res){
       res.status(200);
-      return res.send({ status: "World" });
+      return res.send({ status: "express" });
     });
 
 //Prefix our routes with api and then version
