@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha --recursive test",
-    "start": "node app.js"
+    "start": "node_modules/forever/bin/forever start app.js"
   },
   "author": "Muhammad Raihan Muhaimin",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "chai": "^3.4.1",
     "express": "^4.13.3",
     "file-stream-rotator": "0.0.6",
+    "forever": "^0.15.1",
     "mocha": "^2.3.4",
     "mongoose": "^4.3.4",
     "mongoose-auto-increment": "^5.0.1",
