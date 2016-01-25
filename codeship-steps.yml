@@ -1,0 +1,2 @@
+- service: hello-express
+  command: npm test

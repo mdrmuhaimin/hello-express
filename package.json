@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha --recursive test",
-    "start": "node_modules/forever/bin/forever start app.js"
+    "start": "node app.js",
+    "service_start": "node_modules/forever/bin/forever start app.js",
+    "service_stop": "node_modules/forever/bin/forever stop app.js"
   },
   "author": "Muhammad Raihan Muhaimin",
   "license": "ISC",
@@ -15,6 +17,9 @@
     "express": "^4.13.3",
     "file-stream-rotator": "0.0.6",
     "forever": "^0.15.1",
+    "grunt": "^0.4.5",
+    "grunt-express-server": "^0.5.1",
+    "grunt-mocha-test": "^0.12.7",
     "mocha": "^2.3.4",
     "mongoose": "^4.3.4",
     "mongoose-auto-increment": "^5.0.1",
