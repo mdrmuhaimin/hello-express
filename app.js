@@ -66,6 +66,12 @@ router.route('/tests')
     return res.send({ status: "Green" });
   });
 
+  router.route('/hello')
+    .get(function(req, res){
+      res.status(200);
+      return res.send({ status: "World" });
+    });
+
 //Prefix our routes with api and then version
 app.use('/api/v1', router);
 
