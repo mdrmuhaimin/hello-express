@@ -26,7 +26,7 @@ describe('Testing customer creation API', function(){
           throw err;
         }
         // Check response
-        res.status.should.be.equal(400);
+        res.status.should.be.equal(200);
         done();
       });
   });
