@@ -63,7 +63,7 @@ router.use(function(req, res, next) {
 router.route('/tests')
   .get(function(req, res){
     res.status(200);
-    return res.send({ status: "Actice" });
+    return res.send({ status: "Activating" });
   });
 
   router.route('/hello')
