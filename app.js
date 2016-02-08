@@ -17,9 +17,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 var port = process.env.PORT || 8080;        // set our port
 
-var Customer = require('./app/models/customer')(autoIncrement);
-var EmailService = require('./app/services/email')
-
 // Logging
 var logDirectory = __dirname + '/logs';
 fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
