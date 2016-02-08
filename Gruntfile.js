@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   mochaTest: {
       test: {
         options: {
-            reporter: 'XUnit'
+        //    reporter: 'XUnit'
         },
         src: ['test/**/*.js']
       }
