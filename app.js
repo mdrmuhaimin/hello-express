@@ -5,8 +5,6 @@
 // Packages
 var express =  require('express');
 var bodyParser = require('body-parser');
-var mongoose   = require('mongoose');
-var autoIncrement = require('mongoose-auto-increment');
 
 var FileStreamRotator = require('file-stream-rotator');
 var fs = require('fs');
