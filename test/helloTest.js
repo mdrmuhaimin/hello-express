@@ -16,7 +16,7 @@ describe('Testing customer creation API', function(){
     done();
   });
 
-  it("Should give 200 status when entered hello url.", function(done){
+  it("Should give 400 status when entered hello url.", function(done){
     //Calling rest api with email as a part of req body
     request(url)
       .get('api/v1/hello/')
