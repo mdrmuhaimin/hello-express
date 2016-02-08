@@ -19,3 +19,5 @@ dependencies:
 test:
   override:
     - grunt test
+  post:
+    - mv ./test/reports/junit.xml $CIRCLE_TEST_REPORTS
