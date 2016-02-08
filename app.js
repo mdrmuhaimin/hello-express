@@ -17,12 +17,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 var port = process.env.PORT || 8080;        // set our port
 
-var mongoose   = require('mongoose');
-//database credential shared here just for demonstration in an ideally only env variable should be used
-var dbUrl = process.env.MONGOLAB_URI || 'mongodb://nodeapp:password@ds037195.mongolab.com:37195/heroku_ll6jsgr2';
-var connection = mongoose.connect(dbUrl);
-autoIncrement.initialize(connection);
-
 var Customer = require('./app/models/customer')(autoIncrement);
 var EmailService = require('./app/services/email')
 
