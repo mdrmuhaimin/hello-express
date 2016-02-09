@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       test: {
         options: {
             reporter: 'XUnit',
-            captureFile: './test/reports/junit.xml'
+            captureFile: './tests/reports/junit.xml'
         },
         src: ['test/**/*.js']
       }

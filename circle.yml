@@ -1,23 +1,18 @@
 ## Customize the test machine
 machine:
-
-  # Override /etc/hosts
-  hosts:
-    circlehost: 127.0.0.1
-    dev.mycompany.com: 127.0.0.1
-
-  # Add some environment variables
-  environment:
-    CIRCLE_ENV: test
+  services:
+      - docker
 
 ## Customize dependencies
 dependencies:
-  pre:
-    - npm install
+  override:
+      - docker info
+      - docker build -t mdrmuhaimin/hello-express .
 
 ## Customize test commands
 test:
   override:
-    - grunt test
+    - docker run -d -p 8080:8080 mdrmuhaimin/hello-express; sleep 10
+    - npm test
   post:
-    - mv ./test/reports/junit.xml $CIRCLE_TEST_REPORTS
+    - mv ./tests/reports/junit.xml $CIRCLE_TEST_REPORTS
